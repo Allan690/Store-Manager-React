@@ -14,7 +14,7 @@ class Login extends Component{
     }
     componentWillReceiveProps(nextProps) {
         if(nextProps.auth.isAuthenticated){
-            nextProps.history.push('/signup')
+            nextProps.history.push('/products')
         }
     }
 
