@@ -1,2 +1,2 @@
-export const SEND_EMAIL = 'SEND_EMAIL';
 export const SIGNUP_ERRORS = 'SIGN_UP_ERRORS';
+export const SIGNUP_SUCCESSFUL = 'SIGNUP_SUCCESSFUL';

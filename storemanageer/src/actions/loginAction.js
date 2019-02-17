@@ -25,10 +25,9 @@ export const loginUser = data => dispatch => {
         }
     })
         .then( response => {
-            console.log(response);
-            const {token} = response.data['token'];
+            const token = response.data['token'];
             localStorage.setItem("token", token);
-           toast.success('Welcome '+data.email, { autoClose: 10000 });
+            toast.success('Welcome '+data.email, { autoClose: 10000 });
             dispatch({
                 type: LOGGED_IN_USER,
                 payload: data.email
