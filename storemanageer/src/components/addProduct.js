@@ -16,6 +16,11 @@ class AddProduct extends Component{
             minimum_allowed: ''
         }
     }
+    componentWillReceiveProps(nextProps) {
+        if(nextProps.auth.isAuthenticated){
+            nextProps.history.push('/allProducts')
+        }
+    }
 
     onSubmit = e => {
         e.preventDefault();
@@ -99,4 +104,8 @@ AddProduct.propTypes = {
     addProduct: PropTypes.func.isRequired
 };
 
-export default connect(null, {addProduct})(AddProduct)
+const mapStateToProps = state => ({
+    auth: state.auth
+});
+export default connect(mapStateToProps, {addProduct})(AddProduct)
+

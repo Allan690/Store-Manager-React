@@ -34,6 +34,7 @@ export const addProduct = data => dispatch => {
             payload: data
         });
         toast.success('Product added successfully!');
+        window.location.assign('/allProducts')
     })
         .catch( error =>{
             dispatch({
